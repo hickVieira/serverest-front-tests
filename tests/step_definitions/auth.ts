@@ -7,7 +7,7 @@ let _email: string
 let _password: string
 
 BeforeAll(async () => {
-    _browser = await chromium.launch({ headless: false })
+    _browser = await chromium.launch({ headless: true })
     _page = await _browser.newPage()
     _email = `${crypto.randomUUID()}@email.com`
     _password = '123'
